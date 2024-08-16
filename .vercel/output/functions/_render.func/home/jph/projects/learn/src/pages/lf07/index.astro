@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const lernfeldPosts = await getCollection("lf07")
+
+---
+
+<Layout title="Lernfeld 07">
+    <h1>Lernfeld 07</h1>
+    <ul>{lernfeldPosts.map(post => <li><a href={"lf07/post/"+post.data.title}>{post.data.title}</a></li>)}</ul>
+</Layout>
