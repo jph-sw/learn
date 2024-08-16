@@ -11,6 +11,7 @@ export async function GET(context) {
     // Pull in your project "site" from the endpoint context
     // https://docs.astro.build/en/reference/api-reference/#contextsite
     site: context.site,
+    stylesheet: "/styles.xsl",
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
     items: lf06.map((post) => ({
