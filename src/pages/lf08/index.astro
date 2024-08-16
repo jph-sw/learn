@@ -8,5 +8,5 @@ const lernfeldPosts = await getCollection("lf08")
 
 <Layout title="Lernfeld 08">
     <h1>Lernfeld 08</h1>
-    <ul>{lernfeldPosts.map(post => <li><a href={"lf08/post/"+post.data.title}>{post.data.title}</a></li>)}</ul>
+    <ul>{lernfeldPosts.map(post => <li><a href={"lf08/post/"+post.slug}>{post.data.title}</a></li>)}</ul>
 </Layout>
