@@ -1,6 +1,7 @@
 ---
 title: "Serviceanfragen bearbeiten das Buch"
-date: 2024-08-15
+pubDate: 2024-08-15
+description: ""
 ---
 
 wir haben am 15.08.24 eine datei bekommen
