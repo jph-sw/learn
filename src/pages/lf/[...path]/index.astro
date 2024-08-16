@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+
+const {path} = Astro.params
+
+const lfCollection = await getCollection(path)
+
+if (lfCollection == undefined) {
+    return alert("does not exist")
+}
+
+console.log(lfCollection)
+---
+
+<Layout title="LF">
+    <h1>{path}</h1>
+    <ul>
+        {lfCollection.map((post: any) => <li><a href={path+"/post/"+post.data.title}>{post.data.title} - {post.data.date.toISOString().slice(0,10)}</a></li>)}
+    </ul>
+</Layout>

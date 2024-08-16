@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { getCollection } from 'astro:content';
+
+const learnFolders = await getCollection('learn');
+
+
+export const lernfelder = [
+	{title: "Lernfeld 07", href: "/lf07"},
+	{title: "Lernfeld 08", href: "/lf08"}
+]
+
+---
+
+<Layout title="learn">
+	<main>
+		<h1>learn</h1>
+		<p>hier speichere ich meine schulsachen</p>
+		<ul class="folders">{lernfelder.map(lernfeld => <li><a href={"lf"+lernfeld.href}>{lernfeld.title}</a></li>)}</ul>
+
+	</main>
+</Layout>
+
