@@ -15,6 +15,9 @@ const lf07Collection = defineCollection({
 const lf06Collection = defineCollection({
   schema: rssSchema,
 });
+const englishCollection = defineCollection({
+  schema: rssSchema,
+});
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
@@ -22,4 +25,5 @@ export const collections = {
   lf08: lf08Collection,
   lf07: lf07Collection,
   lf06: lf06Collection,
+  english: englishCollection,
 };
