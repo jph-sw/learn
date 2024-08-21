@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const lernfeldPosts = await getCollection("lf09")
+
+console.log(lernfeldPosts)
+
+---
+
+<Layout title="Lernfeld 09 - Netzwerke und Dienste bereitstellen">
+    <h1>Lernfeld 06 - Serviceanfragen bearbeiten</h1>
+    <ul>{lernfeldPosts.map(post => <li><a href={"lf09/post/"+post.slug}>{post.data.title}</a></li>)}</ul>
+</Layout>
