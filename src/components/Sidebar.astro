@@ -4,10 +4,34 @@ import { lernfelder } from "../pages/index.astro";
 ---
 
 <div class="page">
+    <script>
+        let isOpen = false
+
+        function toggle() {
+            var phonebar = document.getElementById("phone-bar")
+            if (phonebar!.style.display === "none") {
+                phonebar!.style.display = "block"
+            } else {
+                phonebar!.style.display = "none"
+            }
+        }
+
+        document.getElementById("phone_bar_toggle")?.addEventListener("click", toggle)
+    </script>
     <div class="sidebar">
         <ul>
             {lernfelder.map(lernfeld => <li><a href={lernfeld.href}>{lernfeld.title}</a></li>)}
         </ul>
+    </div>
+    <div class="phone-bar">
+        <div style="display: flex; justify-content: end;">
+            <button id="phone_bar_toggle">x</button>
+        </div>
+        <div id="phone-bar" style="display: none;">
+            <ul>
+                {lernfelder.map(lernfeld => <li><a href={lernfeld.href}>{lernfeld.title}</a></li>)}
+            </ul>
+        </div>
     </div>
     <div>
         <slot />
@@ -21,5 +45,20 @@ import { lernfelder } from "../pages/index.astro";
     .sidebar {
         min-width: 20rem;
         padding: 1rem;
+    }
+    .phone-bar {
+        display: none;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .page {
+            display: block;
+        }
+        .sidebar {
+            display: none;
+        }
+        .phone-bar {
+            display: block;
+        }
     }
 </style>
