@@ -1,5 +1,6 @@
 ---
 import '@fontsource/ubuntu-mono';
+import Sidebar from '../components/Sidebar.astro';
 
 interface Props {
 	title: string;
@@ -25,7 +26,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Sidebar>
+			<slot />
+		</Sidebar>
 	</body>
 </html>
 <style is:global>
@@ -44,8 +47,6 @@ const { title } = Astro.props;
   		font-family: 'Ubuntu Mono', monospace;
 		background-color: #24292e;
 		color: #fafbfc;
-		width: 50%;
-		line-height: 1.4rem
 	}
 	a {
 		text-decoration: none;
@@ -58,6 +59,7 @@ const { title } = Astro.props;
 		text-decoration: wavy underline;
 		text-underline-offset: 0.2rem;
 		text-decoration-color: 	#2dba4e;
+		line-height: 2.6rem;
 	}
 	li {
 		margin-bottom: 0.4rem;

@@ -1,0 +1,25 @@
+---
+import { lernfelder } from "../pages/index.astro";
+
+---
+
+<div class="page">
+    <div class="sidebar">
+        <ul>
+            {lernfelder.map(lernfeld => <li><a href={lernfeld.href}>{lernfeld.title}</a></li>)}
+        </ul>
+    </div>
+    <div>
+        <slot />
+    </div> 
+</div>
+
+<style>
+    .page {
+        display: flex;
+    }
+    .sidebar {
+        min-width: 20rem;
+        padding: 1rem;
+    }
+</style>
