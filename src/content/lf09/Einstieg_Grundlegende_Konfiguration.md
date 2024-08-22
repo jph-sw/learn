@@ -41,3 +41,5 @@ Woher weiß ich von diesen?
 - Hochverfügbarkeit
 - Sicherheit / Datenschutz
 - Skalierbarkeit
+
+I.d.R erfahre ich von diesen Anforderungen durch den Kunden!
