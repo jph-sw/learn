@@ -18,7 +18,7 @@ pubDate: 2024-08-29
 <details>
   <summary>Code</summary>
 
-  ```
+  ```c
   @startchen
 
   entity Schueler {
@@ -44,4 +44,33 @@ pubDate: 2024-08-29
 
 ## 3)
 
-![](https://www.plantuml.com/plantuml/png/JOuz2iCm38LtdS8Ny0r2o5xmq49tuGfi6Yl5beTGUhDklLYbb8PixyVViwOcM2KcOW1YoRAwIqoTPghk2SxCvwqcz58q6eOxhUEenNMfZ8LK1OnfawzzujHheuq_Oo_Xm5dpVrnfHiaBjvGVBg4eeEd-lI_UKh36i_-D0ap4Dxlt2m00)
+![](https://www.plantuml.com/plantuml/png/LOz1gWCX38RtEOKNy0R3CFi7itdGlTX0f6EcnBWOIkzU8sBfxZT-tw_PYWRHICW0o9hqSl-HAXuexWLk7hZct4RByi1hNTl5xHGE6LlQGwGUtxFYhqenlOVzgut1W0MFeEdaGkdfAAWPl-_1A31wVikpDnhCyDbt1613ljiQ7m00)
+
+<details>
+  <summary>Code</summary>
+
+  ```
+  @startchen
+
+  entity Schueler {
+    Schuelernummer <<key>>
+    Vorname
+    Nachname
+  }
+
+  entity Kurs {
+    KursNr <<key>>
+    KursName
+  }
+
+  relationship hat {
+   Schuelernummer
+   KursNr
+  }
+
+  Schueler -n- hat
+  hat -m- Kurs
+
+  @endchen
+  ```
+</details>
