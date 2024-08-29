@@ -1,10 +1,10 @@
 ---
-title: "Buisness Letters"
+title: "business Letters"
 pubDate: 2024-08-22
 description: ""
 ---
 
-# Buisness Letters
+# business Letters
 
 ## 1)
 
