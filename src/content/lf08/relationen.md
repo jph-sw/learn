@@ -12,7 +12,35 @@ pubDate: 2024-08-29
 
 ## 2)
 
-![](https://www.plantuml.com/plantuml/png/JOyz2iCm38LtdS8NyD0zXCmjP6YXkqX551ehnPQ747gpRhrOhM12j_V3-v2wf1XrO1804frqTRU1CyqKtGREpFTJJ9z3A57JF6bjsrBSboWOgAWU1zxb-q1SPao9Ti0LS-Z_XhMJEZuZnn5bj76a6NLQ9F7qSepgDakFS_p9MmhMUF4L1D2HFEo17m00)
+![](https://www.plantuml.com/plantuml/png/JOwn2iCm34HtVOL_m4Ft4B9rA6HeeRkQ73ZKLeej3w7qtskROhgTxdIFcv9orCL1Y22wwM5kYylmYEPDfX-IGoZMC3nnZ6C9xdiK3YXgviKr-Uc8Y-UKq01Npc7-BvxnOEIrlKTurcsNvBQNSQobKTm-m8gjBjN4dkmFIpH1rZhv2m00)
+
+
+<details>
+  <summary>Code</summary>
+
+  ```
+  @startchen
+
+  entity Schueler {
+    Schuelernummer <<key>>
+    Vorname
+    Nachname
+  }
+
+  entity Klasse {
+    RaumNr <<key>>
+    Gebaeude
+  }
+
+  relationship hat {
+  }
+
+  Schueler -n- hat
+  hat -1- Klasse
+
+  @endchen
+  ```
+</details>
 
 ## 3)
 
