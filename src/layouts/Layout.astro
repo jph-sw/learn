@@ -64,4 +64,37 @@ const { title } = Astro.props;
 	li {
 		margin-bottom: 0.4rem;
 	}
+	table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Add border to the table and table cells */
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+/* Add padding and text alignment */
+th, td {
+  padding: 8px; /* Smaller padding for compactness */
+  text-align: left;
+}
+
+/* Header background color using var(--accent) and white text */
+th {
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+}
+
+/* Make the table responsive */
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
 </style>
