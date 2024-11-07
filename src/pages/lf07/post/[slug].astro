@@ -1,0 +1,22 @@
+---
+import { getEntry } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+if (slug === undefined) {
+  throw new Error("Slug is required");
+}
+// 2. Query for the entry directly using the request slug
+const entry = await getEntry("lf07", slug);
+// 3. Redirect if the entry does not exist
+if (entry === undefined) {
+  return Astro.redirect("/404");
+}
+const { Content } = await entry.render();
+
+---
+
+<Layout title="">
+    <h2>lf07/{entry.data.title}</h2>
+    <Content />
+</Layout>
