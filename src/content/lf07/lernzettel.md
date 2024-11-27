@@ -12,6 +12,41 @@ description: ""
 
 ## 2. Sensorik
 
-![Aktiv / Passiv]("aktive-passiv.png")
+![Aktiv / Passiv](/images/aktiv-passiv.png)
+
+### Rechnen
+
+y = mx+b
+
+`Spannung = (aktueller Druck / maximaler Druck) x maximale Spannung`
+
+**Beispiel:**
+
+- aktueller Druck: 15
+- maximaler Druck: 50
+- maximale Spannung: 10
+
+Rechnung:
+
+```
+y = (15/50) x 10
+y = 3
+```
 
 ## 3. Digitaltechnik
+
+### Übungen
+
+_das ist ein Nor_
+
+![](/images/logik-1.svg)
+
+![](/images/logik-2.svg)
+
+#### Übung 2
+
+![](/images/zettel-bild.png)
+
+Das ist die Lösung
+
+![](/images/uebung-3.svg)

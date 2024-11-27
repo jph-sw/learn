@@ -13,10 +13,9 @@ if (entry === undefined) {
   return Astro.redirect("/404");
 }
 const { Content } = await entry.render();
-
 ---
 
 <Layout title="">
-    <h2>lf07/{entry.data.title}</h2>
-    <Content />
+  <h2>lf07/{entry.data.title}</h2>
+  <Content />
 </Layout>
