@@ -6,6 +6,14 @@ description: ""
 
 # Datenbanken
 
+## Anomalien
+
+- **Einfügeanomalie**: Schwierigkeit, neue Daten einzufügen, wenn nicht alle Informationen vorhanden sind.
+- **Löschanomalie**: Löschen von Daten führt zum Verlust wichtiger Informationen.
+- **Änderungsanomalie**: Inkonsistenzen durch fehlgeschlagene Aktualisierungen an mehreren Stellen.
+
+## Normalformen
+
 Die **Normalformen** in der Datenbanktheorie sind Regeln, um Redundanzen und Anomalien in relationalen Datenbanken zu vermeiden. Es gibt mehrere Normalformen, aber die ersten drei (1. Normalform, 2. Normalform und 3. Normalform) sind die wichtigsten und am häufigsten verwendeten. Ich erkläre sie dir anhand von Beispielen:
 
 ### 1. Normalform (1NF) – Atomare Werte
